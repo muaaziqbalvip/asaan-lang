@@ -1,0 +1,17 @@
+# Fehrist (list) — pehla item 1 hota hai, 0 nahi!
+dost = ["Ali", "Fatima", "Ahmed"]
+likho "Pehla dost: " + dost[1]
+likho "Kul dost: " + lambai(dost)
+
+shamil(dost, "Zainab")
+likho "Ab fehrist: " + lafz(dost)
+
+har naam andar dost to
+    likho "Salaam, " + naam + "!"
+bas
+
+# Qadam ke saath even numbers
+likho "Even numbers:"
+har i se 2 tak 10 qadam 2 to
+    likho i
+bas

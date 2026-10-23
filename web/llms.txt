@@ -1,0 +1,22 @@
+# Asaan Lang
+
+> Pakistan ki apni Urdu / Roman-Urdu educational programming language.
+> Think in Urdu, code in Urdu, compile websites from the same language.
+
+- Developer: Muaaz Iqbal (Kasur / Lahore, Punjab, Pakistan)
+- Profile / store: https://mizanora.vercel.app
+- GitHub: https://github.com/muaaziqbalvip
+- Docs: https://asaan-lang.vercel.app/docs
+- Ecosystem: https://asaan-lang.vercel.app/ecosystem
+- License: MIT
+
+Install: clone https://github.com/muaaziqbalvip/asaan-lang then ./install.sh
+Run: asaan file.asaan   |   asaan --studio   |   asaan --web site.asaan -o site.html
+
+Related Mizanora projects by Muaaz Iqbal:
+- https://mizanora.vercel.app (halal e-commerce)
+- https://github.com/muaaziqbalvip/MIZANORA
+- https://github.com/muaaziqbalvip/MIZANORAOT
+- https://github.com/muaaziqbalvip/Mizanoraandroid
+- https://github.com/muaaziqbalvip/Mizanora-agent-web
+- https://github.com/muaaziqbalvip/MIZANORA-AIWHATSAPP
