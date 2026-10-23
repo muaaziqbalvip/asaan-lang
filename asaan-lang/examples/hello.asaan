@@ -1,5 +1,0 @@
-# Pehla program! 🎉
-likho "Assalam-o-Alaikum, Duniya!"
-
-naam = lo "Aap ka naam kya hai? "
-likho "Khush Amdeed, " + naam + "!"
