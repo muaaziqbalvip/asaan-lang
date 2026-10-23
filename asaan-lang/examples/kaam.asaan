@@ -1,0 +1,15 @@
+# Apne kaam (functions) banao!
+
+kaam jama(a, b)
+    wapis a + b
+bas
+
+jawab = jama(15, 27)
+likho "15 + 27 = " + lafz(jawab)
+
+kaam salaam(naam)
+    likho "Assalam-o-Alaikum, " + naam + "!"
+bas
+
+salaam("Ali")
+salaam("Fatima")

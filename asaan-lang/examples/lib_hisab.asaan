@@ -1,0 +1,9 @@
+# Doosri files isay lao "lib_hisab.asaan" se use karti hain
+
+kaam darja(n)
+    wapis n * n
+bas
+
+kaam cube(n)
+    wapis n ** 3
+bas
