@@ -1,0 +1,59 @@
+name: ZIP Unzip & Merge
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "**.zip"
+
+permissions:
+  contents: write
+
+jobs:
+  unzip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find ZIP
+        id: zip
+        run: |
+          ZIP=$(find . -type f -name "*.zip" | head -n 1)
+          if [ -z "$ZIP" ]; then
+            echo "No ZIP file found!"
+            exit 1
+          fi
+          echo "zip=$ZIP" >> $GITHUB_OUTPUT
+
+      - name: Extract ZIP
+        run: |
+          mkdir unzip
+          unzip -o "${{ steps.zip.outputs.zip }}" -d unzip
+
+      - name: Remove .github
+        run: |
+          find unzip -type d -name ".github" -exec rm -rf {} +
+
+      - name: Merge Files
+        run: |
+          cp -R unzip/. .
+
+      - name: Cleanup
+        run: |
+          rm -rf unzip
+          find . -maxdepth 1 -name "*.zip" -delete
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add .
+          git diff --cached --quiet || git commit -m "Auto unzip"
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
