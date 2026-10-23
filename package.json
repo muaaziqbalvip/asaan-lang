@@ -1,0 +1,9 @@
+{
+  "name": "asaan-lang-site",
+  "private": true,
+  "version": "1.2.0",
+  "description": "Asaan Lang static site (Vercel). Interpreter is Python locally — not on Vercel.",
+  "scripts": {
+    "build": "mkdir -p public && cp -R web/. public/"
+  }
+}

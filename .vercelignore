@@ -1,0 +1,15 @@
+# Vercel is a STATIC site (public/). Do not treat this repo as a Python app.
+asaan.py
+studio.py
+studio/
+examples/
+__pycache__/
+*.pyc
+*.py
+pyproject.toml
+install.sh
+install.bat
+uninstall.sh
+uninstall.bat
+.venv
+.git

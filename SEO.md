@@ -4,10 +4,19 @@ Developer: **Muaaz Iqbal** · Store: https://mizanora.vercel.app · GitHub: http
 
 ## 1) Vercel par site (public URL)
 
-1. https://github.com/muaaziqbalvip/asaan-lang push karo
-2. [vercel.com](https://vercel.com) → Add New → Project → yeh repo
-3. **Root Directory:** `web`
-4. Deploy → URL: `https://asaan-lang.vercel.app`
+Yeh repo **static site** hai (`public/`). Python interpreter Vercel par nahi chalta.
+
+1. GitHub par latest `main` push karo
+2. [vercel.com](https://vercel.com) → Project → **asaan-lang**
+3. Settings → General:
+   - **Framework Preset:** Other
+   - **Root Directory:** *khaali* (repo root)
+   - **Build Command:** `npm run build`  (ya Override OFF + default)
+   - **Output Directory:** `public`
+   - **Install Command:** `echo skip`  (optional)
+4. Deploy
+
+Agar error `PYTHON_ENTRYPOINT_NOT_FOUND` aaye to Framework Preset zaroor **Other** karo — Vercel `studio.py` ko ghalat function samajh raha hota hai.
 
 Is folder mein pehle se hain:
 
